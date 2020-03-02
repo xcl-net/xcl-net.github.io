@@ -3,9 +3,9 @@
   <entry>
     <title>枚举类扩展方法</title>
     <url>/2020/03/02/%E6%9E%9A%E4%B8%BE%E7%B1%BB%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<a id="more"></a>
+    <content><![CDATA[<h1 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h1><a id="more"></a>
 
-<h1 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> CityEnum</span><br><span class="line">&#123;</span><br><span class="line">    北京,</span><br><span class="line">    上海,</span><br><span class="line">    广州</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> CityEnum</span><br><span class="line">&#123;</span><br><span class="line">    北京,</span><br><span class="line">    上海,</span><br><span class="line">    广州</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h1 id="枚举类扩展方法"><a href="#枚举类扩展方法" class="headerlink" title="枚举类扩展方法"></a>枚举类扩展方法</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">EnumCityCodeExt</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">bool</span> Is_BJ_北京(<span class="keyword">this</span> CityEnum enumCityCode) </span><br><span class="line">    &#123; </span><br><span class="line">        <span class="keyword">return</span> 	(<span class="keyword">int</span>)enumCityCode == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
