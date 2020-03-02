@@ -1,52 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2020/03/01/hello-world/"/>
-      <url>/2020/03/01/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>美女美女图文欣赏</title>
-      <link href="/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/"/>
-      <url>/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/</url>
-      
-        <content type="html"><![CDATA[<h1 id="性感家教美女大图"><a href="#性感家教美女大图" class="headerlink" title="性感家教美女大图"></a>性感家教美女大图</h1><p>高清大图,性感美女家教</p><a id="more"></a><p><img src="/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_07ead933e82a52127fa55f22e15a7e6a.jpg" alt></p><hr><p><img src="/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_df6c98f059e291c331df0091dac10840.jpg" alt></p><hr><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">"武汉加油!"</span>)</span><br><span class="line">Console.WriteLine(<span class="string">"武汉加油!"</span>)</span><br><span class="line">Console.WriteLine(<span class="string">"武汉加油!"</span>)</span><br></pre></td></tr></table></figure><p><img src="/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_fff98893faaa4ecfc81596d8d43ff526.jpg" alt></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2020走进5G时代</title>
-      <link href="/2020/02/29/2020%E8%B5%B0%E8%BF%9B5G%E6%97%B6%E4%BB%A3/"/>
-      <url>/2020/02/29/2020%E8%B5%B0%E8%BF%9B5G%E6%97%B6%E4%BB%A3/</url>
-      
-        <content type="html"><![CDATA[<p>5G的发展也来自于对移动数据日益增长的需求。随着移动互联网的发展，越来越多的设备接入到移动网络中，新的服务和应用层出不穷，全球移动宽带用户在2018年有望达到90亿，到2020年，预计移动通信网络的容量需要在当前的网络容量上增长1000倍。移动数据流量的暴涨将给网络带来严峻的挑战。首先，如果按照当前移动通信网络发展，容量难以支持千倍流量的增长，网络能耗和比特成本难以承受；其次，流量增长必然带来对频谱的进一步需求，而移动通信频谱稀缺，可用频谱呈大跨度、碎片化分布，难以实现频谱的高效使用；此外，要提升网络容量，必须智能高效利用网络资源，例如针对业务和用户的个性进行智能优化，但这方面的能力不足；最后，未来网络必然是一个多网并存的异构移动网络，要提升网络容量，必须解决高效管理各个网络，简化互操作，增强用户体验的问题。为了解决上述挑战，满足日益增长的移动流量需求，亟需发展新一代5G移动通信网络。</p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>newtonjson高级特性</title>
+    <url>/2020/03/02/newtonjson%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</url>
+    <content><![CDATA[<h1 id="Enum序列化特殊字符串处理"><a href="#Enum序列化特殊字符串处理" class="headerlink" title="Enum序列化特殊字符串处理"></a>Enum序列化特殊字符串处理</h1><p>枚举值在序列化输出时候, 想要包含不符合C#命名规范, 可以使用json的一些高级特性;</p>
+<p>枚举类和枚举字段,  添加 json 特性</p>
+<a id="more"></a>
+
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> 枚举命名时候不能特殊字符,例如: - . 等等, 但是使用json特性后, 枚举值序列化后, 可以显示为包含不符合c#命名规范的那些字符的字符串;</span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> </span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> 例如枚举中字段为:   北京</span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> 但是, 描述信息可以为:   北-京</span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> 序列化之后为:  &#123;"city":"北--京"&#125;</span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">  [<span class="meta">JsonConverter(typeof(StringEnumConverter))</span>]</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">enum</span> CityEnum</span><br><span class="line">  &#123;</span><br><span class="line">      [<span class="meta">EnumMember(Value = <span class="meta-string">"北--京"</span>)</span>]</span><br><span class="line">      北京,</span><br><span class="line"></span><br><span class="line">      上海,</span><br><span class="line">      广州</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用时候显示如下:</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> &#123; city = CityEnum.北京 &#125;;</span><br><span class="line"><span class="keyword">var</span> json = JsonConvert.SerializeObject(p);</span><br></pre></td></tr></table></figure>
+
+<p>运行结果如下:</p>
+<p><img src="/2020/03/02/newtonjson%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/image-20200302132214190.png" alt="image-20200302132214190"></p>
+]]></content>
       <categories>
-          
-          <category> 5G+ </category>
-          
+        <category>C#</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>json</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/03/02/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>美女美女图文欣赏</title>
+    <url>/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/</url>
+    <content><![CDATA[<h1 id="性感家教美女大图"><a href="#性感家教美女大图" class="headerlink" title="性感家教美女大图"></a>性感家教美女大图</h1><p>高清大图,性感美女家教</p>
+<a id="more"></a>
+<p><img src="/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_07ead933e82a52127fa55f22e15a7e6a.jpg" alt></p>
+<hr>
+<p><img src="/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_df6c98f059e291c331df0091dac10840.jpg" alt></p>
+<hr>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">"武汉加油!"</span>)</span><br><span class="line">Console.WriteLine(<span class="string">"武汉加油!"</span>)</span><br><span class="line">Console.WriteLine(<span class="string">"武汉加油!"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_fff98893faaa4ecfc81596d8d43ff526.jpg" alt></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>2020走进5G时代</title>
+    <url>/2020/02/29/2020%E8%B5%B0%E8%BF%9B5G%E6%97%B6%E4%BB%A3/</url>
+    <content><![CDATA[<p>5G的发展也来自于对移动数据日益增长的需求。随着移动互联网的发展，越来越多的设备接入到移动网络中，新的服务和应用层出不穷，全球移动宽带用户在2018年有望达到90亿，到2020年，预计移动通信网络的容量需要在当前的网络容量上增长1000倍。移动数据流量的暴涨将给网络带来严峻的挑战。首先，如果按照当前移动通信网络发展，容量难以支持千倍流量的增长，网络能耗和比特成本难以承受；其次，流量增长必然带来对频谱的进一步需求，而移动通信频谱稀缺，可用频谱呈大跨度、碎片化分布，难以实现频谱的高效使用；此外，要提升网络容量，必须智能高效利用网络资源，例如针对业务和用户的个性进行智能优化，但这方面的能力不足；最后，未来网络必然是一个多网并存的异构移动网络，要提升网络容量，必须解决高效管理各个网络，简化互操作，增强用户体验的问题。为了解决上述挑战，满足日益增长的移动流量需求，亟需发展新一代5G移动通信网络。</p>
+]]></content>
+      <categories>
+        <category>5G+</category>
+      </categories>
+  </entry>
 </search>

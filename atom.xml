@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xcl-net.github.io/"/>
-  <updated>2020-02-29T02:06:29.704Z</updated>
+  <updated>2020-03-02T05:29:43.940Z</updated>
   <id>http://xcl-net.github.io/</id>
   
   <author>
@@ -17,23 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://xcl-net.github.io/2020/03/01/hello-world/"/>
-    <id>http://xcl-net.github.io/2020/03/01/hello-world/</id>
-    <published>2020-03-01T02:39:25.599Z</published>
-    <updated>2020-02-29T02:06:29.704Z</updated>
+    <title>newtonjson高级特性</title>
+    <link href="http://xcl-net.github.io/2020/03/02/newtonjson%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/"/>
+    <id>http://xcl-net.github.io/2020/03/02/newtonjson%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</id>
+    <published>2020-03-02T03:22:34.000Z</published>
+    <updated>2020-03-02T05:29:43.940Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Enum序列化特殊字符串处理"><a href="#Enum序列化特殊字符串处理" class="headerlink" title="Enum序列化特殊字符串处理"></a>Enum序列化特殊字符串处理</h1><p>枚举值在序列化输出时候, 想要包含不符合C#命名规范, 可以使用json的一些高级特性;</p><p>枚举类和枚举字段,  添加 json 特性</p><a id="more"></a><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> 枚举命名时候不能特殊字符,例如: - . 等等, 但是使用json特性后, 枚举值序列化后, 可以显示为包含不符合c#命名规范的那些字符的字符串;</span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> </span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> 例如枚举中字段为:   北京</span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> 但是, 描述信息可以为:   北-京</span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> 序列化之后为:  &#123;"city":"北--京"&#125;</span></span><br><span class="line">  <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">  [<span class="meta">JsonConverter(typeof(StringEnumConverter))</span>]</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">enum</span> CityEnum</span><br><span class="line">  &#123;</span><br><span class="line">      [<span class="meta">EnumMember(Value = <span class="meta-string">"北--京"</span>)</span>]</span><br><span class="line">      北京,</span><br><span class="line"></span><br><span class="line">      上海,</span><br><span class="line">      广州</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p>调用时候显示如下:</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> &#123; city = CityEnum.北京 &#125;;</span><br><span class="line"><span class="keyword">var</span> json = JsonConvert.SerializeObject(p);</span><br></pre></td></tr></table></figure><p>运行结果如下:</p><p><img src="/2020/03/02/newtonjson%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/image-20200302132214190.png" alt="image-20200302132214190"></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
+      &lt;h1 id=&quot;Enum序列化特殊字符串处理&quot;&gt;&lt;a href=&quot;#Enum序列化特殊字符串处理&quot; class=&quot;headerlink&quot; title=&quot;Enum序列化特殊字符串处理&quot;&gt;&lt;/a&gt;Enum序列化特殊字符串处理&lt;/h1&gt;&lt;p&gt;枚举值在序列化输出时候, 想要包含不符合C#命名规范, 可以使用json的一些高级特性;&lt;/p&gt;
+&lt;p&gt;枚举类和枚举字段,  添加 json 特性&lt;/p&gt;
     
     </summary>
     
+    
+      <category term="C#" scheme="http://xcl-net.github.io/categories/C/"/>
+    
+    
+      <category term="json" scheme="http://xcl-net.github.io/tags/json/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://xcl-net.github.io/2020/03/02/hello-world/"/>
+    <id>http://xcl-net.github.io/2020/03/02/hello-world/</id>
+    <published>2020-03-01T21:40:54.494Z</published>
+    <updated>2020-03-02T05:45:14.550Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://xcl-net.github.io/categories/hexo/"/>
     
     
   </entry>
