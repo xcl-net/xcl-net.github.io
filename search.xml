@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>枚举类扩展方法</title>
+    <url>/2020/03/02/%E6%9E%9A%E4%B8%BE%E7%B1%BB%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> CityEnum</span><br><span class="line">&#123;</span><br><span class="line">    北京,</span><br><span class="line">    上海,</span><br><span class="line">    广州</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="枚举类扩展方法"><a href="#枚举类扩展方法" class="headerlink" title="枚举类扩展方法"></a>枚举类扩展方法</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">EnumCityCodeExt</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">bool</span> Is_BJ_北京(<span class="keyword">this</span> CityEnum enumCityCode) </span><br><span class="line">    &#123; </span><br><span class="line">        <span class="keyword">return</span> 	(<span class="keyword">int</span>)enumCityCode == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>针对枚举的一些扩展方法,方便调用方,枚举值的判断, 减少输入</p>
+<h2 id="调用方演示"><a href="#调用方演示" class="headerlink" title="调用方演示"></a>调用方演示</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Program</span><br><span class="line">&#123;</span><br><span class="line">    static void Main(string[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        var isBJ &#x3D; CityCode.Is_BJ_北京();  &#x2F;&#x2F; 此处直接调用扩展方法即可</span><br><span class="line"></span><br><span class="line">        Console.WriteLine(isBJ); &#x2F;&#x2F;True</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public static CityEnum CityCode</span><br><span class="line">    &#123;</span><br><span class="line">        get</span><br><span class="line">        &#123;</span><br><span class="line">            return CityEnum.北京;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>c#</category>
+      </categories>
+      <tags>
+        <tag>C#编码技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>newtonjson高级特性</title>
     <url>/2020/03/02/newtonjson%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<h1 id="Enum序列化特殊字符串处理"><a href="#Enum序列化特殊字符串处理" class="headerlink" title="Enum序列化特殊字符串处理"></a>Enum序列化特殊字符串处理</h1><p>枚举值在序列化输出时候, 想要包含不符合C#命名规范, 可以使用json的一些高级特性;</p>
