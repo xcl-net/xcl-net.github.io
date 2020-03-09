@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>枚举类扩展方法</title>
-    <url>/blog/2020/03/02/%E6%9E%9A%E4%B8%BE%E7%B1%BB%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/</url>
+    <url>/2020/03/02/%E6%9E%9A%E4%B8%BE%E7%B1%BB%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h1><a id="more"></a>
 
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> CityEnum</span><br><span class="line">&#123;</span><br><span class="line">    北京,</span><br><span class="line">    上海,</span><br><span class="line">    广州</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -22,7 +22,7 @@
   </entry>
   <entry>
     <title>newtonjson高级特性</title>
-    <url>/blog/2020/03/02/newtonjson%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</url>
+    <url>/2020/03/02/newtonjson%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<h1 id="Enum序列化特殊字符串处理"><a href="#Enum序列化特殊字符串处理" class="headerlink" title="Enum序列化特殊字符串处理"></a>Enum序列化特殊字符串处理</h1><p>枚举值在序列化输出时候, 想要包含不符合C#命名规范, 可以使用json的一些高级特性;</p>
 <p>枚举类和枚举字段,  添加 json 特性</p>
 <a id="more"></a>
@@ -33,7 +33,7 @@
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> &#123; city = CityEnum.北京 &#125;;</span><br><span class="line"><span class="keyword">var</span> json = JsonConvert.SerializeObject(p);</span><br></pre></td></tr></table></figure>
 
 <p>运行结果如下:</p>
-<p><img src="/blog/2020/03/02/newtonjson%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/image-20200302132214190.png" alt="image-20200302132214190"></p>
+<p><img src="/2020/03/02/newtonjson%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/image-20200302132214190.png" alt="image-20200302132214190"></p>
 ]]></content>
       <categories>
         <category>csharp</category>
@@ -44,7 +44,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/blog/2020/03/02/hello-world/</url>
+    <url>/2020/03/02/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <a id="more"></a>
 
@@ -67,23 +67,23 @@
   </entry>
   <entry>
     <title>美女美女图文欣赏</title>
-    <url>/blog/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/</url>
+    <url>/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/</url>
     <content><![CDATA[<h1 id="性感家教美女大图"><a href="#性感家教美女大图" class="headerlink" title="性感家教美女大图"></a>性感家教美女大图</h1><p>高清大图,性感美女家教</p>
 <a id="more"></a>
-<p><img src="/blog/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_07ead933e82a52127fa55f22e15a7e6a.jpg" alt></p>
+<p><img src="/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_07ead933e82a52127fa55f22e15a7e6a.jpg" alt></p>
 <hr>
-<p><img src="/blog/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_df6c98f059e291c331df0091dac10840.jpg" alt></p>
+<p><img src="/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_df6c98f059e291c331df0091dac10840.jpg" alt></p>
 <hr>
 <figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">"武汉加油!"</span>)</span><br><span class="line">Console.WriteLine(<span class="string">"武汉加油!"</span>)</span><br><span class="line">Console.WriteLine(<span class="string">"武汉加油!"</span>)</span><br></pre></td></tr></table></figure>
 
 
 
-<p><img src="/blog/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_fff98893faaa4ecfc81596d8d43ff526.jpg" alt></p>
+<p><img src="/2020/02/29/%E5%9B%BE%E6%96%87%E6%AC%A3%E8%B5%8F/%E6%B8%85%E7%BA%AF%E6%80%A7%E6%84%9F%E7%9A%84%E5%A7%90%E5%A7%90_fff98893faaa4ecfc81596d8d43ff526.jpg" alt></p>
 ]]></content>
   </entry>
   <entry>
     <title>2020走进5G时代</title>
-    <url>/blog/2020/02/29/2020%E8%B5%B0%E8%BF%9B5G%E6%97%B6%E4%BB%A3/</url>
+    <url>/2020/02/29/2020%E8%B5%B0%E8%BF%9B5G%E6%97%B6%E4%BB%A3/</url>
     <content><![CDATA[<p>5G的发展也来自于对移动数据日益增长的需求。随着移动互联网的发展，越来越多的设备接入到移动网络中，新的服务和应用层出不穷，全球移动宽带用户在2018年有望达到90亿，到2020年，预计移动通信网络的容量需要在当前的网络容量上增长1000倍。移动数据流量的暴涨将给网络带来严峻的挑战。首先，如果按照当前移动通信网络发展，容量难以支持千倍流量的增长，网络能耗和比特成本难以承受；其次，流量增长必然带来对频谱的进一步需求，而移动通信频谱稀缺，可用频谱呈大跨度、碎片化分布，难以实现频谱的高效使用；此外，要提升网络容量，必须智能高效利用网络资源，例如针对业务和用户的个性进行智能优化，但这方面的能力不足；最后，未来网络必然是一个多网并存的异构移动网络，要提升网络容量，必须解决高效管理各个网络，简化互操作，增强用户体验的问题。为了解决上述挑战，满足日益增长的移动流量需求，亟需发展新一代5G移动通信网络。</p>
 ]]></content>
       <categories>
