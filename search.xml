@@ -3,7 +3,10 @@
   <entry>
     <title>同一台机器配置码云和github多账号ssh私钥配置</title>
     <url>/2020/03/09/%E5%90%8C%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E9%85%8D%E7%BD%AE%E7%A0%81%E4%BA%91%E5%92%8Cgithub%E5%A4%9A%E8%B4%A6%E5%8F%B7ssh%E7%A7%81%E9%92%A5%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<h3 id="私钥混肴导致没有权限问题"><a href="#私钥混肴导致没有权限问题" class="headerlink" title="私钥混肴导致没有权限问题"></a>私钥混肴导致没有权限问题</h3><h3 id="多账号私钥混肴导致没有权限问题"><a href="#多账号私钥混肴导致没有权限问题" class="headerlink" title="多账号私钥混肴导致没有权限问题"></a>多账号私钥混肴导致没有权限问题</h3><p>github使用SSH与客户端连接。如果是单用户（first），生成密钥对后，将公钥保存至github，每次连接时SSH客户端发送本地私钥（默认~/.ssh/id_rsa）到服务端验证。单用户情况下，连接的服务器上保存的公钥和发送的私钥自然是配对的。但是如果是多用户（first，second），我们在连接到second的帐号时，second保存的是自己的公钥，但是SSH客户端依然发送默认私钥，即first的私钥，那么这个验证自然无法通过。不过，要实现多帐号下的SSH key切换在客户端做一些配置即可。</p>
+    <content><![CDATA[<p>[TOC]</p>
+<a id="more"></a>
+
+<h3 id="多账号私钥混肴导致没有权限问题"><a href="#多账号私钥混肴导致没有权限问题" class="headerlink" title="多账号私钥混肴导致没有权限问题"></a>多账号私钥混肴导致没有权限问题</h3><p>github使用SSH与客户端连接。如果是单用户（first），生成密钥对后，将公钥保存至github，每次连接时SSH客户端发送本地私钥（默认~/.ssh/id_rsa）到服务端验证。单用户情况下，连接的服务器上保存的公钥和发送的私钥自然是配对的。但是如果是多用户（first，second），我们在连接到second的帐号时，second保存的是自己的公钥，但是SSH客户端依然发送默认私钥，即first的私钥，那么这个验证自然无法通过。不过，要实现多帐号下的SSH key切换在客户端做一些配置即可。</p>
 <p> 首先cd到~/.ssh 使用 ssh-keygen -t -rsa -C ‘<a href="mailto:xxxxx@mail.com">xxxxx@mail.com</a>’ 生成新的SSH key：id_rsa_second，生成完后将新的SSH public key添加到github/码云。 </p>
 <p>首先cd到账户根目录下的隐藏文件夹下 .ssh (<em>前提设置为,windows隐藏目录可见</em>):</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
@@ -64,6 +67,9 @@
 
 <p>参考: <a href="https://blog.csdn.net/u013378029/article/details/88309165" target="_blank" rel="noopener">https://blog.csdn.net/u013378029/article/details/88309165</a> </p>
 ]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
   </entry>
   <entry>
     <title>枚举类扩展方法</title>

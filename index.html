@@ -297,7 +297,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-09 14:19:46 / 修改时间：17:58:08" itemprop="dateCreated datePublished" datetime="2020-03-09T14:19:46+08:00">2020-03-09</time>
+              <time title="创建时间：2020-03-09 14:19:46 / 修改时间：18:23:22" itemprop="dateCreated datePublished" datetime="2020-03-09T14:19:46+08:00">2020-03-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index"><span itemprop="name">git</span></a>
+                </span>
             </span>
 
           
@@ -311,67 +320,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="私钥混肴导致没有权限问题"><a href="#私钥混肴导致没有权限问题" class="headerlink" title="私钥混肴导致没有权限问题"></a>私钥混肴导致没有权限问题</h3><h3 id="多账号私钥混肴导致没有权限问题"><a href="#多账号私钥混肴导致没有权限问题" class="headerlink" title="多账号私钥混肴导致没有权限问题"></a>多账号私钥混肴导致没有权限问题</h3><p>github使用SSH与客户端连接。如果是单用户（first），生成密钥对后，将公钥保存至github，每次连接时SSH客户端发送本地私钥（默认~/.ssh/id_rsa）到服务端验证。单用户情况下，连接的服务器上保存的公钥和发送的私钥自然是配对的。但是如果是多用户（first，second），我们在连接到second的帐号时，second保存的是自己的公钥，但是SSH客户端依然发送默认私钥，即first的私钥，那么这个验证自然无法通过。不过，要实现多帐号下的SSH key切换在客户端做一些配置即可。</p>
-<p> 首先cd到~/.ssh 使用 ssh-keygen -t -rsa -C ‘<a href="mailto:xxxxx@mail.com">xxxxx@mail.com</a>’ 生成新的SSH key：id_rsa_second，生成完后将新的SSH public key添加到github/码云。 </p>
-<p>首先cd到账户根目录下的隐藏文件夹下 .ssh (<em>前提设置为,windows隐藏目录可见</em>):</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
-
-<h3 id="生成第一个码云账号公钥并添加到码云ssh绑定页面"><a href="#生成第一个码云账号公钥并添加到码云ssh绑定页面" class="headerlink" title="生成第一个码云账号公钥并添加到码云ssh绑定页面"></a>生成第一个码云账号公钥并添加到码云ssh绑定页面</h3><p>生成第一个码云账号的ssh 私钥</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C '码云绑定的邮箱@<span class="number">163</span>.com' -f ~/.ssh/gitee_177XXXXX_id_rsa</span><br></pre></td></tr></table></figure>
-
-<p>查看第一个码云账号本地生成的公钥串</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/gitee_177XXXXX_id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>公钥添加到码云</p>
-<p><img src="/2020/03/09/%E5%90%8C%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E9%85%8D%E7%BD%AE%E7%A0%81%E4%BA%91%E5%92%8Cgithub%E5%A4%9A%E8%B4%A6%E5%8F%B7ssh%E7%A7%81%E9%92%A5%E9%85%8D%E7%BD%AE/image-20200309154549069.png" alt="image-20200309154549069"></p>
-<h3 id="生成第二个码云账号公钥并添加到码云ssh绑定页面"><a href="#生成第二个码云账号公钥并添加到码云ssh绑定页面" class="headerlink" title="生成第二个码云账号公钥并添加到码云ssh绑定页面"></a>生成第二个码云账号公钥并添加到码云ssh绑定页面</h3><p>生成第二个码云账号的ssh 私钥</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C '码云绑定邮箱@<span class="number">91</span>bihu.com' -f ~/.ssh/gitee_chuanling_id_rsa</span><br></pre></td></tr></table></figure>
-
-<p>查看第二个码云账号本地生成的公钥串</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/gitee_chuanling_id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>公钥添加到码云, 同上;</p>
-<h3 id="生成-github账号公钥并添加到github-ssh绑定页面"><a href="#生成-github账号公钥并添加到github-ssh绑定页面" class="headerlink" title="生成 github账号公钥并添加到github ssh绑定页面"></a>生成 github账号公钥并添加到github ssh绑定页面</h3><p>生成github账号的ssh 私钥</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C 'github绑定邮箱@github.com' -f ~/.ssh/github_46XXXX_id_rsa</span><br></pre></td></tr></table></figure>
-
-<p>查看github账号本地生成的公钥串</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/github_46XXXX_id_rsa.pub</span><br></pre></td></tr></table></figure>
-
-<p>将查到的公钥添加到github,如下;</p>
-<p><img src="/2020/03/09/%E5%90%8C%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E9%85%8D%E7%BD%AE%E7%A0%81%E4%BA%91%E5%92%8Cgithub%E5%A4%9A%E8%B4%A6%E5%8F%B7ssh%E7%A7%81%E9%92%A5%E9%85%8D%E7%BD%AE/image-20200309173614970.png" alt="image-20200309173614970"></p>
-<h3 id="配置SSH-agent"><a href="#配置SSH-agent" class="headerlink" title="配置SSH agent"></a>配置SSH agent</h3><p>默认SSH只会读取id_rsa，所以为了让SSH识别新的私钥，需要将其添加到SSH agent</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ～/.ssh/gitee_177XXXXX_id_rsa</span><br></pre></td></tr></table></figure>
-
-<p>第二个码云账号和github账号,同样按照这个配置;</p>
-<p>可能出现如下问题</p>
-<p> 该命令如果报错：Could not open a connection to your authentication agent.无法连接到ssh agent，可执行</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-agent bash</span><br></pre></td></tr></table></figure>
-
-<p>命令后再执行ssh-add命令。 </p>
-<p> 完成以上步骤后在~/.ssh目录创建config文件，该文件用于配置私钥对应的服务器。内容如下： </p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># gitee <span class="number">177</span>XXXXX@<span class="number">163</span>.com account</span><br><span class="line">Host gitee.com-blog</span><br><span class="line">HostName gitee.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/gitee_177XXXXX_id_rsa</span><br><span class="line"></span><br><span class="line"># gitee chuanling@<span class="number">91</span>bihu.com account</span><br><span class="line">Host gitee.com-chuanling</span><br><span class="line">HostName gitee.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/gitee_chuanling_id_rsa</span><br><span class="line"></span><br><span class="line"># github</span><br><span class="line">Host github.com-xcl-<span class="built_in">net</span></span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/github_46XXXX_id_rsa</span><br></pre></td></tr></table></figure>
-
-<p> Host 命名可以随意即可，方便自己记忆，后续在添加remote是还需要用到。 </p>
-<p>主要修改下 IdentityFile 字段, 将对应的私钥配置正确即可;</p>
-<p> 测试是否配置成功： </p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com-xcl-<span class="built_in">net</span></span><br><span class="line">Hi (you name)! You’ve successfully authenticated, but GITEE.COM does <span class="keyword">not</span> provide shell access.</span><br></pre></td></tr></table></figure>
-
-<p> 配置完成后，在连接非默认帐号的github仓库时，远程库的地址要对应地做一些修改，比如现在添加second帐号下的一个仓库test，则需要这样添加： </p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add test git@(上面配置的Host):second/test.git #并非原来的git@github.com:second/test.git </span><br><span class="line"></span><br><span class="line">git remote add test git@mi.cn:second/test.git #并非原来的git@gitee.com:second/test.git</span><br></pre></td></tr></table></figure>
-
-<p>这样,多个账号就可以同时使用ssh, 免输入账号密码拉去提交代码了;</p>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>可能有如下问题, 我没遇到这个;</p>
-<p>注意：github根据配置文件的user.email来获取github帐号显示author信息，所以对于多帐号用户一定要记得将user.email改为相应的email(<a href="mailto:second@mail.com">second@mail.com</a>)。</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">遗留问题，每次pull &amp; push 都需要输入yes //已解决，如下</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="function">	Warning: <span class="title">the</span> <span class="title">RSA</span> <span class="title">host</span> <span class="title">key</span> <span class="title">for</span> '<span class="title">git.oschina.net</span>' <span class="title">differs</span> <span class="title">from</span> <span class="title">the</span> <span class="title">key</span> <span class="title">for</span> <span class="title">the</span> <span class="title">IP</span> <span class="title">address</span> '116.211.167.14'</span></span><br><span class="line"><span class="function">	<span class="title">Offending</span> <span class="title">key</span> <span class="title">for</span> <span class="title">IP</span> <span class="title">in</span> /<span class="title">Users</span>/<span class="title">StupidBoy</span>/.<span class="title">ssh</span>/<span class="title">known_hosts</span>:7</span></span><br><span class="line"><span class="function">	<span class="title">Matching</span> <span class="title">host</span> <span class="title">key</span> <span class="title">in</span> /<span class="title">Users</span>/<span class="title">StupidBoy</span>/.<span class="title">ssh</span>/<span class="title">known_hosts</span>:2</span></span><br><span class="line"><span class="function">	<span class="title">Are</span> <span class="title">you</span> <span class="title">sure</span> <span class="title">you</span> <span class="title">want</span> <span class="title">to</span> <span class="title">continue</span> <span class="title">connecting</span> (<span class="title">yes</span>/<span class="title">no</span>)?</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -R <span class="number">116</span>.<span class="number">211</span>.<span class="number">167</span>.<span class="number">14</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考: <a href="https://blog.csdn.net/u013378029/article/details/88309165" target="_blank" rel="noopener">https://blog.csdn.net/u013378029/article/details/88309165</a> </p>
-
+          <p>[TOC]</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/03/09/%E5%90%8C%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E9%85%8D%E7%BD%AE%E7%A0%81%E4%BA%91%E5%92%8Cgithub%E5%A4%9A%E8%B4%A6%E5%8F%B7ssh%E7%A7%81%E9%92%A5%E9%85%8D%E7%BD%AE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -845,7 +802,7 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
