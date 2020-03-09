@@ -297,7 +297,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-09 14:19:46 / 修改时间：18:23:22" itemprop="dateCreated datePublished" datetime="2020-03-09T14:19:46+08:00">2020-03-09</time>
+              <time title="创建时间：2020-03-09 14:19:46 / 修改时间：18:32:43" itemprop="dateCreated datePublished" datetime="2020-03-09T14:19:46+08:00">2020-03-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -320,7 +320,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>[TOC]</p>
+          <h3 id="多账号私钥混肴导致没有权限问题"><a href="#多账号私钥混肴导致没有权限问题" class="headerlink" title="多账号私钥混肴导致没有权限问题"></a>多账号私钥混肴导致没有权限问题</h3><p>github使用SSH与客户端连接。如果是单用户（first），生成密钥对后，将公钥保存至github，每次连接时SSH客户端发送本地私钥（默认~/.ssh/id_rsa）到服务端验证。单用户情况下，连接的服务器上保存的公钥和发送的私钥自然是配对的。但是如果是多用户（first，second），我们在连接到second的帐号时，second保存的是自己的公钥，但是SSH客户端依然发送默认私钥，即first的私钥，那么这个验证自然无法通过。不过，要实现多帐号下的SSH key切换在客户端做一些配置即可。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/03/09/%E5%90%8C%E4%B8%80%E5%8F%B0%E6%9C%BA%E5%99%A8%E9%85%8D%E7%BD%AE%E7%A0%81%E4%BA%91%E5%92%8Cgithub%E5%A4%9A%E8%B4%A6%E5%8F%B7ssh%E7%A7%81%E9%92%A5%E9%85%8D%E7%BD%AE/#more" rel="contents">
